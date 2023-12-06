@@ -1,0 +1,170 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://Heroi.gd" type="Script" id=1]
+[ext_resource path="res://assets/Player Yellow/playerYellow_walk3.png" type="Texture" id=2]
+[ext_resource path="res://assets/9726616-pixel-art-8bit-2d-game-scene-with-clouds-grass-bridge-fence-board-flag-background-vetor.jpg" type="Texture" id=3]
+[ext_resource path="res://assets/Player Yellow/playerYellow_walk2.png" type="Texture" id=4]
+[ext_resource path="res://assets/Player Yellow/playerYellow_stand.png" type="Texture" id=5]
+[ext_resource path="res://assets/Player Yellow/playerYellow_walk1.png" type="Texture" id=6]
+[ext_resource path="res://BandeiraVitoria.gd" type="Script" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 96.5, 31.4688 )
+
+[sub_resource type="CapsuleShape2D" id=14]
+radius = 33.0
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 80, 68.5 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 46.5, 20.125 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 49, 19.1875 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 68.5, 130.5 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 65, 122 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 122, 123 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 4, 336.5 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 2, 345 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 49, 22.5 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 85, 25 )
+
+[sub_resource type="SpriteFrames" id=12]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 4 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "andando",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "parado",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=13]
+radius = 19.0
+
+[sub_resource type="CapsuleShape2D" id=15]
+radius = 36.0
+
+[node name="Mundo2" type="Node"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( -17, 181 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 873, 172 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 20.5, 480.469 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1349, 344 )
+shape = SubResource( 14 )
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1394, 351 )
+shape = SubResource( 14 )
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1446, 354 )
+shape = SubResource( 14 )
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1488, 351 )
+shape = SubResource( 14 )
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1538, 341 )
+shape = SubResource( 14 )
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1316, 328 )
+shape = SubResource( 14 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 194, 444 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 540, 421 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 673, 355 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 973.5, 382.5 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1268, 393 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1667, 389 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -81, 159 )
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1820, 172 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 796, 288 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 360, 488 )
+shape = SubResource( 11 )
+
+[node name="Heroi" type="KinematicBody2D" parent="."]
+position = Vector2( 1222, 371 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Heroi"]
+position = Vector2( -1188, 115 )
+scale = Vector2( 1.10526, 0.975509 )
+frames = SubResource( 12 )
+animation = "andando"
+frame = 2
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Heroi"]
+position = Vector2( -1189, 119 )
+shape = SubResource( 13 )
+
+[node name="BandeiraVitoria" type="Area2D" parent="."]
+position = Vector2( 1656, 340 )
+script = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BandeiraVitoria"]
+position = Vector2( 96, 65 )
+shape = SubResource( 15 )
+
+[connection signal="body_entered" from="BandeiraVitoria" to="Heroi" method="_on_BandeiraVitoria_body_entered"]
